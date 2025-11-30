@@ -32,8 +32,11 @@ jobs:
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
 
-      - name: Bump version (patch)
-        run: npm run version:patch
+      - name: Set package version from Git tag
+        run: |
+          TAG_VERSION=${GITHUB_REF#refs/tags/v}
+          echo "Setting version to $TAG_VERSION"
+          npm version $TAG_VERSION --no-git-tag-version
 
       - name: Publish package
         run: npm publish --access public
