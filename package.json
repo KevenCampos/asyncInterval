@@ -1,0 +1,29 @@
+{
+  "name": "nova-pasta",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "bun --watch src/index.ts",
+    "build": "tsc",
+    "test": "bun --watch src/tests/index.ts"
+  },
+  "bugs": {
+    "url": "https://github.com/KevenCampos/FastDiscordJS/issues",
+    "email": "kevencampos1@hotmail.com"
+  },
+  "funding": {
+    "type": "individual",
+    "url": "https://www.paypal.com/donate/?hosted_button_id=DY2LFD4UYWQ2J"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KevenCampos/FastDiscordJS"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
